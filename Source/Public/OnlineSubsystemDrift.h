@@ -78,7 +78,7 @@ public:
      * Is the Drift API available for use
      * @return true if Drift functionality is available, false otherwise
      */
-    bool IsEnabled();
+    bool IsEnabled() const;
 
 PACKAGE_SCOPE:
 

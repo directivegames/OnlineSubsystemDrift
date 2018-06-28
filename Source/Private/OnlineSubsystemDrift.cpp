@@ -265,7 +265,7 @@ FText FOnlineSubsystemDrift::GetOnlineServiceName() const
 }
 
 
-bool FOnlineSubsystemDrift::IsEnabled()
+bool FOnlineSubsystemDrift::IsEnabled() const
 {
     return true;
 }
