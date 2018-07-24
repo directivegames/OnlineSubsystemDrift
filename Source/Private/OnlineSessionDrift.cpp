@@ -49,7 +49,7 @@ public:
      */
     virtual FString ToString() const override
     {
-        return FString::Printf(TEXT("FOnlineAsyncTaskDriftEndSession bWasSuccessful: %d SessionName: %s"), bWasSuccessful, *SessionName.ToString());
+        return FString::Printf(TEXT("FOnlineAsyncTaskDriftEndSession bWasSuccessful: %d SessionName: %s"), int(bWasSuccessful), *SessionName.ToString());
     }
 
     /**
@@ -114,7 +114,7 @@ public:
      */
     virtual FString ToString() const override
     {
-        return FString::Printf(TEXT("FOnlineAsyncTaskDriftDestroySession bWasSuccessful: %d SessionName: %s"), bWasSuccessful, *SessionName.ToString());
+        return FString::Printf(TEXT("FOnlineAsyncTaskDriftDestroySession bWasSuccessful: %d SessionName: %s"), int(bWasSuccessful), *SessionName.ToString());
     }
 
     /**
@@ -1098,6 +1098,12 @@ void FOnlineSessionDrift::DumpSessionState()
     {
         DumpNamedSession(&Sessions[SessionIdx]);
     }
+}
+
+TSharedPtr<const FUniqueNetId> FOnlineSessionDrift::CreateSessionIdFromString(const FString & SessionIdStr)
+{
+	// TODO: Return a proper session id
+	return TSharedPtr<const FUniqueNetId>();
 }
 
 void FOnlineSessionDrift::RegisterLocalPlayer(const FUniqueNetId& PlayerId, FName SessionName, const FOnRegisterLocalPlayerCompleteDelegate& Delegate)

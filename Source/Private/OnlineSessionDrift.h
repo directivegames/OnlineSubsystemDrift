@@ -155,6 +155,7 @@ public:
     virtual void UnregisterLocalPlayer(const FUniqueNetId& PlayerId, FName SessionName, const FOnUnregisterLocalPlayerCompleteDelegate& Delegate) override;
     virtual int32 GetNumSessions() override;
     virtual void DumpSessionState() override;
+	virtual TSharedPtr<const FUniqueNetId> CreateSessionIdFromString(const FString& SessionIdStr) override;
 };
 
 typedef TSharedPtr<FOnlineSessionDrift, ESPMode::ThreadSafe> FOnlineSessionDriftPtr;
