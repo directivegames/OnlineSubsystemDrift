@@ -18,20 +18,16 @@ public class OnlineSubsystemDrift : ModuleRules
     {
 		PCHUsage = PCHUsageMode.NoSharedPCHs;
 		
-		Definitions.Add("ONLINESUBSYSTEMDRIFT_PACKAGE=1");
+		PublicDefinitions.Add("ONLINESUBSYSTEMDRIFT_PACKAGE=1");
 
         PublicIncludePaths.AddRange(
             new string[] {
-                "OnlineSubsystemDrift/Public",
-            }
-            );
+            });
 
 
         PrivateIncludePaths.AddRange(
             new string[] {
-                "OnlineSubsystemDrift/Private",
-            }
-            );
+            });
 
         PublicDependencyModuleNames.AddRange(
 			new string[]
