@@ -16,7 +16,7 @@ public class OnlineSubsystemDrift : ModuleRules
 {
 	public OnlineSubsystemDrift(ReadOnlyTargetRules TargetRules) : base(TargetRules)
     {
-		PCHUsage = PCHUsageMode.NoSharedPCHs;
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 		
 		PublicDefinitions.Add("ONLINESUBSYSTEMDRIFT_PACKAGE=1");
 
