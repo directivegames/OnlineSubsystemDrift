@@ -1,6 +1,5 @@
 // Copyright 2016-2017 Directive Games Limited - All Rights Reserved.
 
-#include "OnlineSubsystemDriftPrivatePCH.h"
 #include "OnlineIdentityDrift.h"
 #include "OnlineSubsystemDrift.h"
 
