@@ -1,7 +1,7 @@
 // Copyright 1998-2015 Epic Games, Inc. All Rights Reserved.
 
-#include "OnlineSubsystem.h"
 #include "VoiceInterfaceDrift.h"
+#include "OnlineSubsystem.h"
 #include "VoiceEngineDrift.h"
 #include "OnlineIdentityInterface.h"
 #include "OnlineSessionInterface.h"
