@@ -11,6 +11,20 @@
 #include "VoiceInterface.h"
 
 
+#ifndef S_OK
+#define S_OK 0
+#endif
+#ifndef E_FAIL
+#define E_FAIL 0x80004005
+#endif
+#ifndef ERROR_IO_PENDING
+#define ERROR_IO_PENDING 0X3E5
+#endif
+#ifndef ERROR_SUCCESS
+#define ERROR_SUCCESS 0X0
+#endif
+
+
 FOnlineSessionInfoDrift::FOnlineSessionInfoDrift()
 : SessionId{ TEXT("INVALID") }
 {

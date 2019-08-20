@@ -148,6 +148,16 @@ IOnlineTurnBasedPtr FOnlineSubsystemDrift::GetTurnBasedInterface() const
     return nullptr;
 }
 
+IOnlineStatsPtr FOnlineSubsystemDrift::GetStatsInterface() const
+{
+	return nullptr;
+}
+
+IOnlineTournamentPtr FOnlineSubsystemDrift::GetTournamentInterface() const
+{
+	return nullptr;
+}
+
 bool FOnlineSubsystemDrift::Tick(float DeltaTime)
 {
     if (!FOnlineSubsystemImpl::Tick(DeltaTime))

@@ -59,7 +59,9 @@ public:
     virtual IOnlineMessagePtr GetMessageInterface() const override;
     virtual IOnlinePresencePtr GetPresenceInterface() const override;
     virtual IOnlineChatPtr GetChatInterface() const override;
+	virtual IOnlineStatsPtr GetStatsInterface() const override;
     virtual IOnlineTurnBasedPtr GetTurnBasedInterface() const override;
+	virtual IOnlineTournamentPtr GetTournamentInterface() const override;
     
     virtual bool Init() override;
     virtual bool Shutdown() override;
@@ -94,16 +96,6 @@ PACKAGE_SCOPE:
         OnlineAsyncTaskThread(nullptr)
     {}
 
-    FOnlineSubsystemDrift() :
-        SessionInterface(nullptr),
-        VoiceInterface(nullptr),
-        bVoiceInterfaceInitialized(false),
-        LeaderboardsInterface(nullptr),
-        IdentityInterface(nullptr),
-        AchievementsInterface(nullptr),
-        OnlineAsyncTaskThreadRunnable(nullptr),
-        OnlineAsyncTaskThread(nullptr)
-    {}
 
     IDriftAPI* GetDrift();
 
