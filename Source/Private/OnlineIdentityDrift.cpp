@@ -212,7 +212,7 @@ TArray<TSharedPtr<FUserOnlineAccount> > FOnlineIdentityDrift::GetAllUserAccounts
 {
     TArray<TSharedPtr<FUserOnlineAccount> > Result;
 
-	for (const auto Itr : UserAccounts)
+	for (const auto& Itr : UserAccounts)
 	{
 		Result.Add(Itr.Value);
 	}
