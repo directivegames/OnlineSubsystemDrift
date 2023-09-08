@@ -83,6 +83,11 @@ class FVoiceEngineDrift : public IVoiceEngine
 				}
 			}
 		}
+
+		FString GetReferencerName() const override
+		{
+			return TEXT("FVoiceSerializeHelper");
+		}
 	};
 
 	friend class FVoiceSerializeHelper;
