@@ -147,7 +147,7 @@ public:
 
 	static FUniqueNetIdDriftRef EmptyId()
 	{
-		static const auto DummyId = MakeShareable(new FUniqueNetIdDrift());
+		static const FUniqueNetIdDriftRef DummyId = MakeShareable(new FUniqueNetIdDrift());
 		return DummyId;
 	}
 
