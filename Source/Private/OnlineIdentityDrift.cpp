@@ -321,7 +321,11 @@ FOnlineIdentityDrift::~FOnlineIdentityDrift()
     }
 }
 
+#if UE_VERSION_OLDER_THAN(5, 4, 0)
 void FOnlineIdentityDrift::GetUserPrivilege(const FUniqueNetId& UserId, EUserPrivileges::Type Privilege, const FOnGetUserPrivilegeCompleteDelegate& Delegate)
+#else
+void FOnlineIdentityDrift::GetUserPrivilege(const FUniqueNetId& UserId, EUserPrivileges::Type Privilege, const FOnGetUserPrivilegeCompleteDelegate& Delegate, EShowPrivilegeResolveUI ShowResolveUI)
+#endif
 {
     Delegate.ExecuteIfBound(UserId, Privilege, (uint32)EPrivilegeResults::NoFailures);
 }

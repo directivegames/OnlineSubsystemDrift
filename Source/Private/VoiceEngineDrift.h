@@ -45,7 +45,7 @@ public:
 	/** Receive side timestamp since last voice packet fragment */
 	double LastSeen;
 	/** Audio component playing this buffer (only valid on remote instances) */
-	class UAudioComponent* AudioComponent;
+	TObjectPtr<UAudioComponent> AudioComponent;
 	/** Per remote talker voice decoding state */
 	TSharedPtr<class IVoiceDecoder> VoiceDecoder;
 };

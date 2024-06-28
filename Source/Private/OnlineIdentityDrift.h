@@ -68,7 +68,11 @@ public:
     FString GetPlayerNickname(const FUniqueNetId& UserId) const override;
     FString GetAuthToken(int32 LocalUserNum) const override;
 	void RevokeAuthToken(const FUniqueNetId& LocalUserId, const FOnRevokeAuthTokenCompleteDelegate& Delegate) override;
+#if UE_VERSION_OLDER_THAN(5, 4, 0)
 	void GetUserPrivilege(const FUniqueNetId& UserId, EUserPrivileges::Type Privilege, const FOnGetUserPrivilegeCompleteDelegate& Delegate) override;
+#else
+	void GetUserPrivilege(const FUniqueNetId& UserId, EUserPrivileges::Type Privilege, const FOnGetUserPrivilegeCompleteDelegate& Delegate, EShowPrivilegeResolveUI ShowResolveUI = EShowPrivilegeResolveUI::Default) override;
+#endif
     FPlatformUserId GetPlatformUserIdFromUniqueNetId(const FUniqueNetId& UniqueNetId) const override;
     FString GetAuthType() const override;
 
