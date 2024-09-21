@@ -253,6 +253,14 @@ bool FOnlineSubsystemDrift::Shutdown()
 
     #undef DESTRUCT_INTERFACE
 
+#if WITH_EDITOR
+	// When closing PIE instances, shutdown here is called after game instance shutdown causing Drift to be recreated, so we need to destroy the drift instance again here.
+	if (InstanceName != NAME_None && InstanceName != DefaultInstanceName)
+	{
+		FDriftWorldHelper{InstanceName}.DestroyInstance();
+	}
+#endif
+
     return true;
 }
 
